@@ -1,0 +1,247 @@
+[
+  {
+    "name": "accessible_reorder",
+    "description": "Accessible, state-management-agnostic reorderable lists and grids for Flutter, with pointer, touch, keyboard, screen-reader, RTL, and policy support.",
+    "language": "Dart",
+    "topics": [
+      "accessibility",
+      "dart",
+      "drag-and-drop",
+      "flutter",
+      "keyboard-navigation",
+      "reorderable-grid",
+      "reorderable-list",
+      "screen-reader"
+    ],
+    "htmlUrl": "https://github.com/wasiliy-strecker/accessible_reorder",
+    "homepage": null,
+    "license": "MIT",
+    "updatedAt": "2026-07-21T05:25:37Z"
+  },
+  {
+    "name": "adaptive_network_policy",
+    "description": "Native network conditions and deterministic execution policies for Flutter apps on Android, iOS, and macOS.",
+    "language": "Dart",
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/adaptive_network_policy",
+    "homepage": null,
+    "license": "MIT",
+    "updatedAt": "2026-07-21T21:19:26Z"
+  },
+  {
+    "name": "csv-healer",
+    "description": "Desktop-first Flutter app that repairs CSV files locally for Excel, DATEV, shops and banks.",
+    "language": "Dart",
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/csv-healer",
+    "homepage": null,
+    "license": "NOASSERTION",
+    "updatedAt": "2026-07-17T06:03:13Z"
+  },
+  {
+    "name": "dart-concurrency-lab",
+    "description": "Executable Dart concurrency experiments with deterministic tests, benchmarks, and a production-style streaming CLI.",
+    "language": "Dart",
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/dart-concurrency-lab",
+    "homepage": null,
+    "license": "MIT",
+    "updatedAt": "2026-07-23T05:07:25Z"
+  },
+  {
+    "name": "docker-wordpress",
+    "description": null,
+    "language": "PHP",
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/docker-wordpress",
+    "homepage": null,
+    "license": "MIT",
+    "updatedAt": "2026-07-17T04:38:21Z"
+  },
+  {
+    "name": "flowform-studio",
+    "description": "Visual form and approval workflow studio built with React, TypeScript, NestJS and WebSockets.",
+    "language": "TypeScript",
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/flowform-studio",
+    "homepage": null,
+    "license": "NOASSERTION",
+    "updatedAt": "2026-07-18T06:02:48Z"
+  },
+  {
+    "name": "java-concurrency-lab",
+    "description": "Production-minded Java 21 concurrency examples with virtual threads, single-flight request coalescing, bounded resources, cancellation, and deterministic tests.",
+    "language": "Java",
+    "topics": [
+      "completable-future",
+      "concurrency",
+      "java",
+      "java-21",
+      "junit",
+      "maven",
+      "multithreading",
+      "virtual-threads"
+    ],
+    "htmlUrl": "https://github.com/wasiliy-strecker/java-concurrency-lab",
+    "homepage": null,
+    "license": "Apache-2.0",
+    "updatedAt": "2026-07-19T06:53:37Z"
+  },
+  {
+    "name": "java-idempotency-kit",
+    "description": "Production-minded idempotency for Java 21 and Spring Boot: atomic PostgreSQL leases, safe result replay, metrics, Testcontainers, and a runnable order API.",
+    "language": "Java",
+    "topics": [
+      "concurrency",
+      "distributed-systems",
+      "idempotency",
+      "java",
+      "maven",
+      "postgresql",
+      "spring-boot",
+      "testcontainers"
+    ],
+    "htmlUrl": "https://github.com/wasiliy-strecker/java-idempotency-kit",
+    "homepage": null,
+    "license": "Apache-2.0",
+    "updatedAt": "2026-07-22T06:10:15Z"
+  },
+  {
+    "name": "java-patterns-playbook",
+    "description": "Executable Java 21 design patterns and idioms with realistic examples, focused tests, and explicit trade-offs.",
+    "language": "Java",
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/java-patterns-playbook",
+    "homepage": null,
+    "license": "Apache-2.0",
+    "updatedAt": "2026-07-17T19:05:25Z"
+  },
+  {
+    "name": "node-reliability-lab",
+    "description": "Production-grade Node.js reliability patterns for bounded concurrency, streaming ingestion, cancellation, graceful shutdown, diagnostics, and failure testing.",
+    "language": "TypeScript",
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/node-reliability-lab",
+    "homepage": null,
+    "license": "Apache-2.0",
+    "updatedAt": "2026-07-20T20:27:42Z"
+  },
+  {
+    "name": "pdf-batch-studio",
+    "description": "Source-available PDF batch automation for CSV-to-AcroForm workflows — Java 21, Spring Boot, JavaFX, PostgreSQL and Docker.",
+    "language": "Java",
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/pdf-batch-studio",
+    "homepage": null,
+    "license": "NOASSERTION",
+    "updatedAt": "2026-07-17T05:50:38Z"
+  },
+  {
+    "name": "react-resilience-lab",
+    "description": "Executable React and Node.js resilience patterns: cancellation, persistent optimistic UI, idempotent replay, and conflict recovery.",
+    "language": "TypeScript",
+    "topics": [
+      "indexeddb",
+      "nodejs",
+      "offline-first",
+      "playwright",
+      "react",
+      "resilience",
+      "tanstack-query",
+      "typescript"
+    ],
+    "htmlUrl": "https://github.com/wasiliy-strecker/react-resilience-lab",
+    "homepage": null,
+    "license": "Apache-2.0",
+    "updatedAt": "2026-07-22T20:08:18Z"
+  },
+  {
+    "name": "rest-api",
+    "description": null,
+    "language": "PHP",
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/rest-api",
+    "homepage": null,
+    "license": "MIT",
+    "updatedAt": "2026-07-17T04:38:18Z"
+  },
+  {
+    "name": "rich-notes-images",
+    "description": null,
+    "language": "JavaScript",
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/rich-notes-images",
+    "homepage": null,
+    "license": "MIT",
+    "updatedAt": "2026-07-17T04:38:22Z"
+  },
+  {
+    "name": "typed-config-processor",
+    "description": "Compile-time type-safe Java configuration with annotation processing, generated loaders, secret-safe diagnostics, and zero runtime reflection.",
+    "language": "Java",
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/typed-config-processor",
+    "homepage": null,
+    "license": "Apache-2.0",
+    "updatedAt": "2026-07-20T06:16:06Z"
+  },
+  {
+    "name": "typed-policy-kit",
+    "description": " Type-safe authorization policies for React and Express with contextual RBAC, default-deny semantics, and server-side enforcement.",
+    "language": "TypeScript",
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/typed-policy-kit",
+    "homepage": null,
+    "license": "MIT",
+    "updatedAt": "2026-07-18T12:19:11Z"
+  },
+  {
+    "name": "ubuntu-server-minimal-conf",
+    "description": null,
+    "language": "HTML",
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/ubuntu-server-minimal-conf",
+    "homepage": null,
+    "license": "MIT",
+    "updatedAt": "2026-07-17T04:38:24Z"
+  },
+  {
+    "name": "virtual-tree-kit",
+    "description": "Headless, accessible virtualized tree primitives for React, built for large hierarchies and predictable keyboard focus.",
+    "language": "TypeScript",
+    "topics": [
+      "accessibility",
+      "component-library",
+      "headless-ui",
+      "react",
+      "treeview",
+      "typescript",
+      "virtualization",
+      "wai-aria"
+    ],
+    "htmlUrl": "https://github.com/wasiliy-strecker/virtual-tree-kit",
+    "homepage": "https://wasiliy-strecker.github.io/virtual-tree-kit/",
+    "license": "MIT",
+    "updatedAt": "2026-07-24T05:28:16Z"
+  },
+  {
+    "name": "wasiliy-strecker.de",
+    "description": "Bilingual developer portfolio for Java, React, Node.js and Flutter projects",
+    "language": null,
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/wasiliy-strecker.de",
+    "homepage": null,
+    "license": null,
+    "updatedAt": "2026-07-24T17:21:08Z"
+  },
+  {
+    "name": "ws-forms",
+    "description": null,
+    "language": "PHP",
+    "topics": [],
+    "htmlUrl": "https://github.com/wasiliy-strecker/ws-forms",
+    "homepage": null,
+    "license": "MIT",
+    "updatedAt": "2026-07-17T04:38:15Z"
+  }
+]
