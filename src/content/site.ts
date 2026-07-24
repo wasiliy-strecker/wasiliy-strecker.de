@@ -58,7 +58,7 @@ export const copy = {
       body: "Mein beruflicher Hintergrund verbindet technische Umsetzung mit einem BWL-Studium und langjähriger Arbeit an datenreichen Geschäftsanwendungen.",
       entries: [
         {
-          period: "seit 02/2026",
+          period: "02/2025",
           title: "Anwendungsentwickler",
           text: "Anwendungsentwicklung mit PHP, JavaScript und WordPress sowie Weiterentwicklung bestehender digitaler Prozesse.",
         },
@@ -178,7 +178,7 @@ export const copy = {
       body: "My professional background combines implementation experience with a business degree and years of work on data-heavy business applications.",
       entries: [
         {
-          period: "since 02/2026",
+          period: "02/2025",
           title: "Application Developer",
           text: "Application development with PHP, JavaScript, and WordPress, plus ongoing improvement of established digital processes.",
         },
