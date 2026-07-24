@@ -25,4 +25,4 @@ scp -q "$portfolio_root/deploy/vhost_nginx.conf" \
 ssh -o BatchMode=yes "$portfolio_host" \
   "set -e; chown -R wasiliy_strecker:psacln '$portfolio_webroot'; find '$portfolio_webroot' -type d -exec chmod 755 {} +; find '$portfolio_webroot' -type f -exec chmod 644 {} +; plesk sbin httpdmng --reconfigure-domain wasiliy-strecker.de; nginx -t"
 
-printf 'Deployed https://wasiliy-strecker.de/ (backup: %s)\\n' "$portfolio_backup_root"
+printf 'Deployed https://wasiliy-strecker.de/ (backup: %s)\n' "$portfolio_backup_root"
