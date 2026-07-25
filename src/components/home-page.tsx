@@ -6,6 +6,7 @@ import {
   Code2,
   Mail,
   MapPin,
+  NotebookTabs,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
@@ -22,6 +23,12 @@ import { ProjectGrid } from "./project-grid";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
 
+const contestGalleryUrl = "https://www.contest-gallery.com/";
+const contestGalleryListingUrl = "https://wordpress.org/plugins/contest-gallery/";
+const richNotesRepositoryUrl = "https://github.com/wasiliy-strecker/rich-notes-images";
+const richNotesStoreUrl =
+  "https://chromewebstore.google.com/detail/rich-notes-images/gpkojjmcckkkdhljdapipnfngoneleog";
+
 export function HomePage({ locale }: { locale: Locale }) {
   const text = getCopy(locale);
   const alternateHref = locale === "de" ? "/en/" : "/";
@@ -34,7 +41,7 @@ export function HomePage({ locale }: { locale: Locale }) {
     image: `${siteUrl}/media/wasiliy-strecker.webp`,
     jobTitle: locale === "de" ? "Anwendungsentwickler" : "Application Developer",
     email: `mailto:${contactEmail}`,
-    sameAs: [githubUrl, "https://www.contest-gallery.com/"],
+    sameAs: [githubUrl, contestGalleryUrl, richNotesStoreUrl],
     knowsAbout: [
       "Java",
       "Spring Boot",
@@ -135,39 +142,74 @@ export function HomePage({ locale }: { locale: Locale }) {
 
         <section className="section section--production">
           <div className="shell">
-            <div className="production-card">
-              <div className="production-card__symbol" aria-hidden="true">
-                <Sparkles size={34} />
-              </div>
-              <div className="production-card__content">
-                <p className="eyebrow">{text.production.eyebrow}</p>
-                <h2>{text.production.title}</h2>
-                <p>{text.production.body}</p>
-                <div className="production-card__actions">
-                  <ExternalLink
-                    className="button button--on-dark"
-                    href="https://www.contest-gallery.com/"
-                  >
-                    {text.production.primary}
-                  </ExternalLink>
-                  <ExternalLink
-                    className="text-link text-link--on-dark"
-                    href="https://wordpress.org/plugins/contest-gallery/"
-                  >
-                    {text.production.secondary}
-                  </ExternalLink>
+            <div className="section-heading production-section__heading">
+              <p className="eyebrow">{text.production.eyebrow}</p>
+              <h2>{text.production.title}</h2>
+              <p>{text.production.body}</p>
+            </div>
+            <div className="production-grid">
+              <article className="production-card production-card--contest">
+                <div className="production-card__symbol" aria-hidden="true">
+                  <Sparkles size={32} />
                 </div>
-              </div>
-              <div className="production-card__metrics">
-                <div>
-                  <strong>{text.production.metricOne}</strong>
-                  <span>{text.production.metricOneLabel}</span>
+                <div className="production-card__content">
+                  <p className="eyebrow">{text.production.contest.eyebrow}</p>
+                  <h3>{text.production.contest.title}</h3>
+                  <p className="production-card__body">{text.production.contest.body}</p>
+                  <div className="production-card__metrics">
+                    <div>
+                      <strong>{text.production.contest.metricOne}</strong>
+                      <span>{text.production.contest.metricOneLabel}</span>
+                    </div>
+                    <div>
+                      <strong>{text.production.contest.metricTwo}</strong>
+                      <span>{text.production.contest.metricTwoLabel}</span>
+                    </div>
+                  </div>
+                  <div className="production-card__actions">
+                    <ExternalLink className="button button--on-dark" href={contestGalleryUrl}>
+                      {text.production.contest.primary}
+                    </ExternalLink>
+                    <ExternalLink
+                      className="text-link text-link--on-dark"
+                      href={contestGalleryListingUrl}
+                    >
+                      {text.production.contest.secondary}
+                    </ExternalLink>
+                  </div>
                 </div>
-                <div>
-                  <strong>{text.production.metricTwo}</strong>
-                  <span>{text.production.metricTwoLabel}</span>
+              </article>
+              <article className="production-card production-card--chrome">
+                <div className="production-card__symbol" aria-hidden="true">
+                  <NotebookTabs size={32} />
                 </div>
-              </div>
+                <div className="production-card__content">
+                  <p className="eyebrow">{text.production.chrome.eyebrow}</p>
+                  <h3>{text.production.chrome.title}</h3>
+                  <p className="production-card__body">{text.production.chrome.body}</p>
+                  <div className="production-card__metrics">
+                    <div>
+                      <strong>{text.production.chrome.metricOne}</strong>
+                      <span>{text.production.chrome.metricOneLabel}</span>
+                    </div>
+                    <div>
+                      <strong>{text.production.chrome.metricTwo}</strong>
+                      <span>{text.production.chrome.metricTwoLabel}</span>
+                    </div>
+                  </div>
+                  <div className="production-card__actions">
+                    <ExternalLink className="button button--on-dark" href={richNotesStoreUrl}>
+                      {text.production.chrome.primary}
+                    </ExternalLink>
+                    <ExternalLink
+                      className="text-link text-link--on-dark"
+                      href={richNotesRepositoryUrl}
+                    >
+                      {text.production.chrome.secondary}
+                    </ExternalLink>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </section>

@@ -8,7 +8,21 @@ test("German home presents the recruiter story and every project", async ({ page
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "Robuste Software für echte Abläufe",
   );
+  await expect(page.getByText("10+", { exact: true })).toBeVisible();
   await expect(page.getByText("1.000+", { exact: true })).toBeVisible();
+  await expect(page.locator(".production-card")).toHaveCount(2);
+  const chromeProduct = page.locator(".production-card--chrome");
+  await expect(chromeProduct.getByRole("heading")).toHaveText("Rich Notes & Images");
+  await expect(chromeProduct.getByText("247", { exact: true })).toBeVisible();
+  await expect(chromeProduct.getByText("Featured", { exact: true })).toBeVisible();
+  await expect(chromeProduct.getByRole("link", { name: /Im Chrome Web Store/ })).toHaveAttribute(
+    "href",
+    "https://chromewebstore.google.com/detail/rich-notes-images/gpkojjmcckkkdhljdapipnfngoneleog",
+  );
+  await expect(chromeProduct.getByRole("link", { name: /Quellcode auf GitHub/ })).toHaveAttribute(
+    "href",
+    "https://github.com/wasiliy-strecker/rich-notes-images",
+  );
   await expect(page.locator(".project-card")).toHaveCount(21);
   await expect(page.getByRole("link", { name: "Projekt ansehen" }).first()).toBeVisible();
 });
@@ -22,6 +36,9 @@ test("English content and language navigation are available", async ({ page }) =
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "Reliable software for real workflows",
   );
+  await expect(page.getByText("10+", { exact: true })).toBeVisible();
+  await expect(page.locator(".production-card--chrome")).toContainText("247");
+  await expect(page.locator(".production-card--chrome")).toContainText("Featured");
 });
 
 test("filters compact projects and opens a bilingual detail page", async ({ page }) => {
