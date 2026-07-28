@@ -59,7 +59,7 @@ export const copy = {
     featured: {
       eyebrow: "Ausgewählte Projekte",
       title: "Technische Tiefe, sichtbar gemacht.",
-      body: "Sechs Projekte, die meine gewünschte Ausrichtung am klarsten zeigen: Java zuerst, danach React und Node.js sowie Flutter.",
+      body: "Sechs Projekte mit klarem Zielprofil: drei Java-Schwerpunkte, zwei React-/Node.js-Systeme und ein Flutter-Produkt.",
     },
     allProjects: {
       eyebrow: "Gesamtes Portfolio",
@@ -195,7 +195,7 @@ export const copy = {
     featured: {
       eyebrow: "Selected projects",
       title: "Technical depth, made visible.",
-      body: "Six projects that show my intended direction most clearly: Java first, followed by React and Node.js, plus Flutter.",
+      body: "Six projects with a clear target profile: three Java specialties, two React and Node.js systems, and one Flutter product.",
     },
     allProjects: {
       eyebrow: "Complete portfolio",

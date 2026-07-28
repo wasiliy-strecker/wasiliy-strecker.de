@@ -13,11 +13,153 @@ export const categoryLabels: Record<ProjectCategory, { de: string; en: string }>
 
 export const projects: Project[] = [
   {
+    slug: "transactional-outbox-relay",
+    repository: "transactional-outbox-relay",
+    title: "Transactional Outbox Relay",
+    category: "java",
+    featuredOrder: 1,
+    status: {
+      de: "Java-/Spring-Boot-Referenzsystem",
+      en: "Java & Spring Boot reference system",
+    },
+    summary: {
+      de: "Zuverlässige Transactional-Outbox-Verarbeitung mit Java 21, Spring Boot, PostgreSQL, Kafka, Leases, Retries und Testcontainers.",
+      en: "Reliable transactional outbox processing with Java 21, Spring Boot, PostgreSQL, Kafka, leases, retries, and Testcontainers.",
+    },
+    problem: {
+      de: "Fachliche Daten und Broker-Ereignisse müssen gemeinsam zuverlässig entstehen, obwohl Datenbank und Kafka keine gemeinsame Transaktion teilen und Abstürze jederzeit möglich sind.",
+      en: "Business data and broker events need reliable creation even though the database and Kafka do not share one transaction and crashes can happen at any time.",
+    },
+    outcome: {
+      de: "Eine modulare Bibliothek mit Spring-Boot-Starter und ausführbarer Order-API, die atomare Outbox-Writes, At-least-once-Zustellung und nachvollziehbare Fehlergrenzen demonstriert.",
+      en: "A modular library with a Spring Boot starter and runnable order API demonstrating atomic outbox writes, at-least-once delivery, and explicit failure boundaries.",
+    },
+    highlights: {
+      de: [
+        "Atomare Fach- und Outbox-Writes in einer Spring-Transaktion",
+        "PostgreSQL-Leases, Compare-and-set-Übergänge und Crash-Recovery",
+        "Kafka-Acknowledgements, stabile Partition Keys und begrenzte Retries",
+        "Micrometer, Flyway sowie PostgreSQL-/Kafka-Testcontainers",
+      ],
+      en: [
+        "Atomic business and outbox writes in one Spring transaction",
+        "PostgreSQL leases, compare-and-set transitions, and crash recovery",
+        "Kafka acknowledgements, stable partition keys, and bounded retries",
+        "Micrometer, Flyway, and PostgreSQL/Kafka Testcontainers",
+      ],
+    },
+    technologies: [
+      "Java 21",
+      "Spring Boot",
+      "PostgreSQL",
+      "Apache Kafka",
+      "Testcontainers",
+      "Virtual Threads",
+    ],
+    links: [
+      {
+        kind: "github",
+        label: { de: "Quellcode auf GitHub", en: "Source on GitHub" },
+        href: github("transactional-outbox-relay"),
+      },
+    ],
+  },
+  {
+    slug: "java-performance-lab",
+    repository: "java-performance-lab",
+    title: "Java Performance Lab",
+    category: "java",
+    featuredOrder: 3,
+    status: {
+      de: "Messbares Java-Performance-Lab",
+      en: "Evidence-driven Java performance lab",
+    },
+    summary: {
+      de: "Correctness-first Java-21-Fallstudie mit JMH, Java Flight Recorder, Allocation- und GC-Profiling, Virtual Threads und reproduzierbaren Messergebnissen.",
+      en: "Correctness-first Java 21 case study with JMH, Java Flight Recorder, allocation and GC profiling, virtual threads, and reproducible evidence.",
+    },
+    problem: {
+      de: "Performance-Optimierungen sind ohne bewiesene fachliche Gleichheit, kontrollierte Messbedingungen und Rohdaten schnell irreführend.",
+      en: "Performance optimizations quickly become misleading without proven behavioral equivalence, controlled measurement conditions, and raw evidence.",
+    },
+    outcome: {
+      de: "Ein mehrmoduliges Labor, das zwei Implementierungen zuerst vertraglich verifiziert, anschließend in geforkten JVMs misst und Laufzeiteffekte mit JFR diagnostiziert.",
+      en: "A multi-module lab that verifies two implementations against the same contract, measures them in forked JVMs, and diagnoses runtime effects with JFR.",
+    },
+    highlights: {
+      de: [
+        "Contract- und Differentialtests vor jeder Performance-Aussage",
+        "JMH mit Forks, Warm-up, Parametern und GC-Profiler",
+        "Eigene JFR-Events und speicherschonende Streaming-Analyse",
+        "Versionierte Rohdaten und bewusst begrenzte Optimierungsentscheidung",
+      ],
+      en: [
+        "Contract and differential tests before every performance claim",
+        "JMH with forks, warm-up, parameters, and the GC profiler",
+        "Custom JFR events and memory-conscious streaming analysis",
+        "Versioned raw evidence and a deliberately bounded optimization decision",
+      ],
+    },
+    technologies: ["Java 21", "JMH", "JFR", "Virtual Threads", "Maven", "JUnit"],
+    links: [
+      {
+        kind: "github",
+        label: { de: "Quellcode auf GitHub", en: "Source on GitHub" },
+        href: github("java-performance-lab"),
+      },
+    ],
+  },
+  {
+    slug: "durable-webhook-kit",
+    repository: "durable-webhook-kit",
+    title: "Durable Webhook Kit",
+    category: "react-node",
+    featuredOrder: 4,
+    status: {
+      de: "Node.js-/React-Referenzsystem",
+      en: "Node.js & React reference system",
+    },
+    summary: {
+      de: "Langlebige ausgehende Webhooks mit Node.js, PostgreSQL-Leases, signierten Requests, begrenzten Retries, Replay und React-Failure-Lab.",
+      en: "Durable outbound webhooks with Node.js, PostgreSQL leases, signed requests, bounded retries, replay tooling, and a React failure lab.",
+    },
+    problem: {
+      de: "Webhook-Zustellung muss auch bei Worker-Rennen, Timeouts, verlorenen Antworten, DNS-Risiken, ausgeschöpften Retries und Prozessabbruch nachvollziehbar bleiben.",
+      en: "Webhook delivery must remain reviewable across worker races, timeouts, lost responses, DNS risks, exhausted retries, and process shutdown.",
+    },
+    outcome: {
+      de: "Eine wiederverwendbare Bibliothek mit PostgreSQL-Persistenz, Fastify-Control-Plane, React-Betriebskonsole und realen Browser-Abläufen für Erfolgs- und Fehlerfälle.",
+      en: "A reusable library with PostgreSQL persistence, a Fastify control plane, a React operations console, and real browser journeys for success and failure cases.",
+    },
+    highlights: {
+      de: [
+        "At-least-once-Vertrag mit idempotentem Enqueue und explizitem Replay",
+        "Leases, Append-only-Versuche und begrenzte Retry-Strategien",
+        "HMAC-signierte Requests sowie DNS-gepinnter SSRF-Schutz",
+        "Fastify, OpenAPI, SSE, React und Playwright gegen reale Services",
+      ],
+      en: [
+        "At-least-once contract with idempotent enqueue and explicit replay",
+        "Leases, append-only attempts, and bounded retry policies",
+        "HMAC-signed requests and DNS-pinned SSRF protection",
+        "Fastify, OpenAPI, SSE, React, and Playwright against real services",
+      ],
+    },
+    technologies: ["Node.js", "TypeScript", "PostgreSQL", "Fastify", "React", "Playwright"],
+    links: [
+      {
+        kind: "github",
+        label: { de: "Quellcode auf GitHub", en: "Source on GitHub" },
+        href: github("durable-webhook-kit"),
+      },
+    ],
+  },
+  {
     slug: "java-idempotency-kit",
     repository: "java-idempotency-kit",
     title: "Java Idempotency Kit",
     category: "java",
-    featuredOrder: 1,
+    featuredOrder: 2,
     status: { de: "Bibliothek & Referenzanwendung", en: "Library & reference application" },
     summary: {
       de: "Idempotente Request-Verarbeitung für Java 21 und Spring Boot mit atomaren PostgreSQL-Leases, sicherem Replay und nachvollziehbaren Fehlergrenzen.",
@@ -59,7 +201,6 @@ export const projects: Project[] = [
     repository: "pdf-batch-studio",
     title: "PDF Batch Studio",
     category: "java",
-    featuredOrder: 2,
     status: { de: "Desktop- & Webanwendung", en: "Desktop & web application" },
     summary: {
       de: "CSV-gesteuerte PDF-Automatisierung als Spring-Boot-Webanwendung und vollständig offline nutzbare JavaFX-Desktop-App.",
@@ -106,7 +247,7 @@ export const projects: Project[] = [
     repository: "flowform-studio",
     title: "FlowForm Studio",
     category: "react-node",
-    featuredOrder: 3,
+    featuredOrder: 5,
     status: { de: "Full-Stack-Portfolioanwendung", en: "Full-stack portfolio application" },
     summary: {
       de: "Visueller Formular- und Freigabe-Workflow mit React, NestJS, PostgreSQL, WebSockets und einem durchgängigen Recruiter-Szenario.",
@@ -148,7 +289,6 @@ export const projects: Project[] = [
     repository: "react-resilience-lab",
     title: "React Resilience Lab",
     category: "react-node",
-    featuredOrder: 4,
     status: { de: "Ausführbares Resilience-Lab", en: "Executable resilience lab" },
     summary: {
       de: "React- und Node.js-Muster für Abbruch, persistente Optimistic UI, idempotentes Replay und sichtbare Konfliktauflösung.",
@@ -195,7 +335,6 @@ export const projects: Project[] = [
     repository: "node-reliability-lab",
     title: "Node Reliability Lab",
     category: "react-node",
-    featuredOrder: 5,
     status: { de: "Ausführbares Backend-Lab", en: "Executable backend lab" },
     summary: {
       de: "Node.js-Laufzeitmuster für begrenzte Parallelität, Streaming, Worker-Isolation, Diagnostik und kontrolliertes Herunterfahren.",

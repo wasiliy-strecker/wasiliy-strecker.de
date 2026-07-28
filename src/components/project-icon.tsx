@@ -3,8 +3,10 @@ import {
   Boxes,
   Coffee,
   Container,
+  DatabaseZap,
   FileCode2,
   GalleryHorizontalEnd,
+  Gauge,
   Globe2,
   Network,
   PackageCheck,
@@ -12,6 +14,7 @@ import {
   ServerCog,
   ShieldCheck,
   Shuffle,
+  Webhook,
   Workflow,
   Wrench,
 } from "lucide-react";
@@ -19,6 +22,9 @@ import {
 import type { Project } from "@/data/types";
 
 const icons: Record<string, typeof Coffee> = {
+  "transactional-outbox-relay": DatabaseZap,
+  "java-performance-lab": Gauge,
+  "durable-webhook-kit": Webhook,
   "java-idempotency-kit": ShieldCheck,
   "pdf-batch-studio": FileCode2,
   "flowform-studio": Workflow,

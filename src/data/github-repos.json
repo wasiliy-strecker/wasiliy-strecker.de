@@ -59,6 +59,25 @@
     "updatedAt": "2026-07-17T04:38:21Z"
   },
   {
+    "name": "durable-webhook-kit",
+    "description": "Durable outbound webhooks for Node.js with PostgreSQL leases, signed requests, bounded retries, replay, and a React failure lab.",
+    "language": "TypeScript",
+    "topics": [
+      "distributed-systems",
+      "fastify",
+      "nodejs",
+      "postgresql",
+      "react",
+      "reliability",
+      "typescript",
+      "webhooks"
+    ],
+    "htmlUrl": "https://github.com/wasiliy-strecker/durable-webhook-kit",
+    "homepage": null,
+    "license": "MIT",
+    "updatedAt": "2026-07-27T06:14:22Z"
+  },
+  {
     "name": "flowform-studio",
     "description": "Visual form and approval workflow studio built with React, TypeScript, NestJS and WebSockets.",
     "language": "TypeScript",
@@ -115,6 +134,29 @@
     "homepage": null,
     "license": "Apache-2.0",
     "updatedAt": "2026-07-17T19:05:25Z"
+  },
+  {
+    "name": "java-performance-lab",
+    "description": "Correctness-first Java 21 performance lab with JMH, JFR, allocation and GC profiling, virtual threads, and reproducible benchmark evidence.",
+    "language": "Java",
+    "topics": [
+      "benchmarking",
+      "garbage-collection",
+      "java",
+      "java-21",
+      "java-flight-recorder",
+      "jfr",
+      "jmh",
+      "jvm",
+      "maven",
+      "performance",
+      "profiling",
+      "virtual-threads"
+    ],
+    "htmlUrl": "https://github.com/wasiliy-strecker/java-performance-lab",
+    "homepage": null,
+    "license": "Apache-2.0",
+    "updatedAt": "2026-07-26T07:52:09Z"
   },
   {
     "name": "node-reliability-lab",
@@ -176,6 +218,26 @@
     "updatedAt": "2026-07-17T04:38:22Z"
   },
   {
+    "name": "transactional-outbox-relay",
+    "description": "Reliable transactional outbox processing for Java and Spring Boot with PostgreSQL, Kafka, retries, leases, metrics, and Testcontainers.",
+    "language": "Java",
+    "topics": [
+      "apache-kafka",
+      "distributed-systems",
+      "java",
+      "java-21",
+      "postgresql",
+      "spring-boot",
+      "testcontainers",
+      "transactional-outbox",
+      "virtual-threads"
+    ],
+    "htmlUrl": "https://github.com/wasiliy-strecker/transactional-outbox-relay",
+    "homepage": null,
+    "license": "Apache-2.0",
+    "updatedAt": "2026-07-25T05:59:17Z"
+  },
+  {
     "name": "typed-config-processor",
     "description": "Compile-time type-safe Java configuration with annotation processing, generated loaders, secret-safe diagnostics, and zero runtime reflection.",
     "language": "Java",
@@ -227,12 +289,18 @@
   {
     "name": "wasiliy-strecker.de",
     "description": "Bilingual developer portfolio for Java, React, Node.js and Flutter projects",
-    "language": null,
-    "topics": [],
+    "language": "TypeScript",
+    "topics": [
+      "bilingual",
+      "developer-portfolio",
+      "nextjs",
+      "portfolio",
+      "typescript"
+    ],
     "htmlUrl": "https://github.com/wasiliy-strecker/wasiliy-strecker.de",
-    "homepage": null,
-    "license": null,
-    "updatedAt": "2026-07-24T17:21:08Z"
+    "homepage": "https://wasiliy-strecker.de",
+    "license": "MIT",
+    "updatedAt": "2026-07-25T06:37:28Z"
   },
   {
     "name": "ws-forms",

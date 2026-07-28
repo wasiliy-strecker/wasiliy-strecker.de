@@ -10,6 +10,7 @@ test("German home presents the recruiter story and every project", async ({ page
   );
   await expect(page.getByText("10+", { exact: true })).toBeVisible();
   await expect(page.getByText("1.000+", { exact: true })).toBeVisible();
+  await expect(page.locator(".proof-strip").getByText("23", { exact: true })).toBeVisible();
   await expect(page.locator(".production-card")).toHaveCount(2);
   const chromeProduct = page.locator(".production-card--chrome");
   await expect(chromeProduct.getByRole("heading")).toHaveText("Rich Notes & Images");
@@ -23,7 +24,7 @@ test("German home presents the recruiter story and every project", async ({ page
     "href",
     "https://github.com/wasiliy-strecker/rich-notes-images",
   );
-  await expect(page.locator(".project-card")).toHaveCount(21);
+  await expect(page.locator(".project-card")).toHaveCount(24);
   await expect(page.getByRole("link", { name: "Projekt ansehen" }).first()).toBeVisible();
 });
 
@@ -39,6 +40,43 @@ test("English content and language navigation are available", async ({ page }) =
   await expect(page.getByText("10+", { exact: true })).toBeVisible();
   await expect(page.locator(".production-card--chrome")).toContainText("247");
   await expect(page.locator(".production-card--chrome")).toContainText("Featured");
+});
+
+test("new repositories have complete bilingual detail pages", async ({ page }) => {
+  const projects = [
+    {
+      slug: "transactional-outbox-relay",
+      title: "Transactional Outbox Relay",
+      repository: "transactional-outbox-relay",
+    },
+    {
+      slug: "java-performance-lab",
+      title: "Java Performance Lab",
+      repository: "java-performance-lab",
+    },
+    {
+      slug: "durable-webhook-kit",
+      title: "Durable Webhook Kit",
+      repository: "durable-webhook-kit",
+    },
+  ];
+
+  for (const project of projects) {
+    await page.goto(`/projekte/${project.slug}/`);
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText(project.title);
+    await expect(page.getByRole("link", { name: "Quellcode auf GitHub" })).toHaveAttribute(
+      "href",
+      `https://github.com/wasiliy-strecker/${project.repository}`,
+    );
+
+    await page.goto(`/en/projects/${project.slug}/`);
+    await expect(page.locator("html")).toHaveAttribute("lang", "en");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText(project.title);
+    await expect(page.getByRole("link", { name: "Source on GitHub" })).toHaveAttribute(
+      "href",
+      `https://github.com/wasiliy-strecker/${project.repository}`,
+    );
+  }
 });
 
 test("filters compact projects and opens a bilingual detail page", async ({ page }) => {

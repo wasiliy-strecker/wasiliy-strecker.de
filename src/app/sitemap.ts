@@ -7,7 +7,7 @@ import { projectPath } from "@/lib/routes";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-07-24T00:00:00+02:00");
+  const lastModified = new Date("2026-07-28T00:00:00+02:00");
   const staticRoutes = [
     { de: "/", en: "/en/", priority: 1 },
     { de: "/impressum/", en: "/en/legal-notice/", priority: 0.2 },

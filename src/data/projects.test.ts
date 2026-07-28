@@ -1,10 +1,11 @@
 import { describe, expect, it } from "vitest";
 
+import githubRepositories from "./github-repos.json";
 import { featuredProjects, projects } from "./projects";
 
 describe("portfolio project catalog", () => {
   it("contains every planned project", () => {
-    expect(projects).toHaveLength(21);
+    expect(projects).toHaveLength(24);
   });
 
   it("uses unique slugs and repository names", () => {
@@ -15,13 +16,24 @@ describe("portfolio project catalog", () => {
     expect(new Set(repositories).size).toBe(repositories.length);
   });
 
+  it("represents every public GitHub repository", () => {
+    const catalogRepositories = new Set(
+      projects.flatMap((project) => (project.repository ? [project.repository] : [])),
+    );
+
+    expect(githubRepositories).toHaveLength(23);
+    for (const repository of githubRepositories) {
+      expect(catalogRepositories.has(repository.name)).toBe(true);
+    }
+  });
+
   it("keeps the six strongest projects in the agreed order", () => {
     expect(featuredProjects.map((project) => project.slug)).toEqual([
+      "transactional-outbox-relay",
       "java-idempotency-kit",
-      "pdf-batch-studio",
+      "java-performance-lab",
+      "durable-webhook-kit",
       "flowform-studio",
-      "react-resilience-lab",
-      "node-reliability-lab",
       "csv-healer",
     ]);
   });
